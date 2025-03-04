@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController
 class LeaderboardController(
     private val gameResultService: GameResultService
 ) {
-
+    // we have to change id to get timeInSeconds
     @GetMapping
     fun getLeaderboard(): List<GameResult> =
         gameResultService.getGameResults().sortedWith(compareBy({ -it.score }, { it.timeInSeconds}))

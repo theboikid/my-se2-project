@@ -36,7 +36,7 @@ class LeaderboardControllerTests {
         assertEquals(second, res[1])
         assertEquals(third, res[2])
     }
-
+    // we have to change the time in second for this test (start from smallest to biggest)
     @Test
     fun test_getLeaderboard_sameScore_CorrectIdSorting() {
         val first = GameResult(1, "first", 20, 10.0)
